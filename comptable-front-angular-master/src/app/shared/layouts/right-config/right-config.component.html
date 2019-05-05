@@ -1,0 +1,15 @@
+<button class="config-switch" (click)="configToggle()">
+  <i class="fa fa-tasks" *ngIf="!isConfigToggle"></i>
+  <i class="fa fa-chevron-right" *ngIf="isConfigToggle"></i>
+</button>
+<div class="right-config-wrap" [ngClass]="{'right-config-wrap-on':isConfigToggle}">
+
+  <ul class="config-content">
+    <li class="config-list">
+      <span>Deconnection</span>
+      <switch  (click)="deconnect()" [(checked)]="connect"></switch>
+    </li>
+    
+
+  </ul>
+</div>

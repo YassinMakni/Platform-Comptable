@@ -1,0 +1,100 @@
+
+                    <div class="row cadre">
+                       
+                      <div class="col-lg-12 cadre-body">
+                        <div class="card card-outline-info">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">Nouveau Collaborateur</h4>
+                            </div>
+                            <div class="card-body">
+                                <form [formGroup]="collaborateurForm" (ngSubmit)="onSubmit(collaborateurForm)" class="form-horizontal">
+                                    <div class="form-body">
+                    
+                                        <h3 class="box-title m-t-15">Collaborateur Info</h3>
+                                        <hr class="m-t-0 m-b-40">
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger row">
+                                                    <label class="control-label text-right col-md-3">Nom</label>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control form-control-danger" formControlName="nom">
+                                                        <small class="form-control-feedback"> </small></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger row">
+                                                    <label class="control-label text-right col-md-4">Prénom</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control form-control-danger" formControlName="prenom">
+                                                        <small class="form-control-feedback"> </small></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                              <div class="col-md-6">
+                                                      <div class="form-group has-danger row">
+                                                          <label class="control-label text-right col-md-3">Télephone</label>
+                                                          <div class="col-md-9">
+                                                              <input type="text" class="form-control form-control-danger" formControlName="telephone">
+                                                              <small class="form-control-feedback"> </small></div>
+                                                      </div>
+                                                  </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger row">
+                                                    <label class="control-label text-right col-md-4">Email</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control form-control-danger" formControlName="email">
+                                                        <small class="form-control-feedback"> </small></div>
+                                                </div>
+                                            </div>
+  
+  
+                                        </div>
+                                        <!--/row-->
+                                        <h3 class="box-title">Sécurité</h3>
+                                        <hr class="m-t-0 m-b-40">
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger row">
+                                                    <label class="control-label text-right col-md-3">Mot de passe </label>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control form-control-danger" formControlName="motDePasse" >
+                                                        <small class="form-control-feedback"> </small>Le mot de passe doit comporter un minimum de 8 caractères,
+                                                         se composer de chiffres et de lettres et comprendre des majuscules/minuscules</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger row">
+                                                    <label class="control-label text-right col-md-4">Ecrire de nouveau</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control form-control-danger">
+                                                        <small class="form-control-feedback"> </small>message alert !</div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <!--/row-->
+                                     
+                                    </div>
+                                    <hr>
+                                    <div class="form-actions">
+                                        <div class="row">
+                                            <div class="col-md-9"> </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                        <button type="submit" class="btn btn-success pull-right">Submit</button>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                  </div>

@@ -1,0 +1,165 @@
+<!-- header header  -->
+<div class="header">
+  <nav class="navbar top-navbar navbar-expand-md navbar-light">
+      <!-- Logo -->
+      <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+              <!-- Logo icon -->
+            <!--   <b><img src="../assets/images/logo.png" alt="homepage" class="dark-logo" /></b> -->
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span><img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" /></span>
+          </a>
+      </div>
+      <!-- End Logo -->
+      <div class="navbar-collapse">
+          <!-- toggle and nav items -->
+          <ul class="navbar-nav mr-auto mt-md-0">
+              <!-- This is  -->
+              <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+              
+              <!-- Messages -->
+              <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th-large"></i></a>
+                  <div class="dropdown-menu animated zoomIn">
+                      <ul class="mega-dropdown-menu row">
+
+                          <!-- <li class="col-lg-3  m-b-30">
+                              <h4 class="m-b-20">CONTACT US</h4>
+                              <form>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" id="exampleInputname1" placeholder="Enter Name"> </div>
+                                  <div class="form-group">
+                                      <input type="email" class="form-control" placeholder="Enter email"> </div>
+                                  <div class="form-group">
+                                      <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
+                                  </div>
+                                  <button type="submit" class="btn btn-info">Submit</button>
+                              </form>
+                          </li> -->
+                          <li class="col-lg-3 col-xlg-3 m-b-30">
+                              <h4 class="m-b-20">List style</h4>
+                              <!-- List style -->
+                              <ul class="list-style-none">
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                              </ul>
+                          </li>
+                          <li class="col-lg-3 col-xlg-3 m-b-30">
+                              <h4 class="m-b-20">List style</h4>
+                              <!-- List style -->
+                              <ul class="list-style-none">
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                              </ul>
+                          </li>
+                          <li class="col-lg-3 col-xlg-3 m-b-30">
+                              <h4 class="m-b-20">List style</h4>
+                              <!-- List style -->
+                              <ul class="list-style-none">
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                                  <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <!-- End Messages -->
+          </ul>
+          <!-- User profile and search -->
+          <ul class="navbar-nav my-lg-0">
+
+              <!-- Search -->
+           
+              <!-- Comment -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-muted text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-bell"></i>
+                      <div class="notify"> <span *ngIf="notifications?.length != 0" class="heartbit"></span> <span *ngIf="notifications?.length != 0" class="point"></span> </div>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
+                      <ul>
+                          <li>
+                              <div class="drop-title">Notifications</div>
+                          </li>
+                          <li>
+                              <div class="message-center">
+                                  <p *ngFor="let notification of notifications" >
+                                      <a  (click)="redirect(notification.idobject,notification.id)" >
+                                          <div class="user-img"> <img src="../assets/images/users/5.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                          <div class="mail-contnet">
+                                              <h5>{{notification.personne.nomSociete}}</h5> <span class="mail-desc">Nouveau fichier: {{notification.contenue}}</span> <span class="time">{{notification.dateCreation}}</span>
+                                          </div>
+                                      </a>
+                                  </p>
+                              </div>
+                          </li>
+                          <li>
+                              <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <!-- End Comment -->
+              <!-- Messages -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-muted  " href="#" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-envelope"></i>
+                      <div class="notify"> <span *ngIf="notificationsMessage?.length != 0" class="heartbit"></span> <span *ngIf="notificationsMessage?.length != 0" class="point"></span> </div>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn" aria-labelledby="2">
+                      <ul>
+                          <li>
+                              <div *ngIf="notificationsMessage?.length != 0; else NULLMESSAGE" class="drop-title">Vous avez {{notificationsMessage?.length}} messages non lu</div>
+                              <ng-template #NULLMESSAGE>
+                                  <div class="drop-title">Pas de messages</div>
+                                </ng-template>
+                          </li>
+                          <li>
+                              <div class="message-center">
+       
+                                          <p *ngFor="let notification of notificationsMessage" >
+                                              <a  (click)="redirect(notification.idobject,notification.id)" >
+                                                  <div class="user-img"> <img src="../assets/images/users/5.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                  <div class="mail-contnet">
+                                                      <h5>{{notification.personne.nomSociete}}</h5> <span class="mail-desc">{{notification.contenue}}</span> <span class="time">{{notification.dateCreation}}</span>
+                                                  </div>
+                                              </a>
+                                          </p>
+                                      
+                                      
+                           
+                           
+                              </div>
+                          </li>
+                          <li>
+                              <a class="nav-link text-center" routerLink="email-inbox"> <strong>Voir tous les messages </strong> <i class="fa fa-angle-right"></i> </a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <!-- End Messages -->
+              <!-- Profile -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/5.jpg" alt="user" class="profile-pic" /></a>
+                  <div class="dropdown-menu dropdown-menu-right animated zoomIn">
+                      <ul class="dropdown-user">
+                          <li><a routerLink="profile"><i class="ti-user"></i> Profile</a></li>
+                          <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
+                          <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                          <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
+                          <li><a routerLink="/login"><i class="fa fa-power-off"></i> Logout</a></li>
+                      </ul>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</div>
+<!-- End header header -->

@@ -1,0 +1,14 @@
+button{
+    margin: 5px; 
+}
+.progress{
+    height: 20px;
+}
+.progress-bar{
+    background-color: #11caff ; 
+}
+#sample{
+    margin-left: 70px ; 
+    margin-bottom: 50px ; 
+  
+}

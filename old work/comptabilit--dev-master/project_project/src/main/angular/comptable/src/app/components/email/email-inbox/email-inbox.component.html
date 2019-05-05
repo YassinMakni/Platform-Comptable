@@ -1,0 +1,77 @@
+  <!-- Start Page Content -->
+  <div class="row">
+      <div class="col-12">
+          <div class="card">
+              <div class="card-body">
+                  <div class="card-content"> 
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-md-3">
+                                   <!-- Left sidebar -->
+                     
+                            <a class="btn btn-danger btn-block waves-effect waves-light" href="email-compose.html">Compose</a>
+                            <div class="mail-list mt-4">
+                              <a href="#" class="list-group-item border-0 text-danger"><i class="mdi mdi-inbox font-18 align-middle mr-2"></i><b>Boîte de réception</b><span class="label label-danger float-right ml-2">8</span></a>
+                              <a href="#" class="list-group-item border-0"><i class="mdi mdi-send font-18 align-middle mr-2"></i>Messages envoyés</a>
+                              <a class="list-group-item border-0" href="#"><i class="mdi mdi-file-document-box font-18 align-middle mr-2"></i>Draft<span class="label label-info float-right ml-2">32</span></a>
+                          </div>
+                      
+                        <!-- End Left sidebar -->
+                              </div>
+                              <div class="col-md-9">
+                                
+                                       <div id="escapingBallG"  *ngIf="!messages">
+                                            <p>CHARGEMENT</p>
+                                            <div id="escapingBall_1" class="escapingBallG"></div>
+                                        </div>
+                                            <div class="" *ngIf="messages">
+                                                <div class="mt-4">
+                                                    <div class="">
+                                                        <ul class="message-list">
+                                                            <li *ngFor=" let message of messages" [ngClass]="{'unread':!message.lu}">
+                                                                <a [routerLink]="['../email-read', message.id]" >
+                                                                    <div class="col-mail col-mail-1">
+                                                                        <div class="checkbox-wrapper-mail">
+                                                                            <!-- <input type="checkbox" > -->
+                                                                            <div class="supp">
+                                                                                    <i class="fa fa-trash"></i>
+                                                                            </div>
+                                                                           
+                                                                        </div> 
+                                                                        <p class="title">Administration</p><span class="star-toggle "></span>
+                                                                    </div>
+                                                                    <div class="col-mail col-mail-2">
+                                                                        <div class="subject"> {{message.object}} &nbsp;
+                                                                        
+                                                                        </div>
+                                                                        <div class="date">11:49 am</div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                  
+                                                      
+                                                   </ul>
+                                                    </div>
+                  
+                                                </div>
+                                                <!-- panel body -->
+                                            </div>
+                                            <!-- panel -->
+                  
+                                           
+                                      
+                  
+                              </div>
+                          </div>
+                      </div>
+                   
+
+            
+                      <div class="clearfix"></div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End PAge Content -->

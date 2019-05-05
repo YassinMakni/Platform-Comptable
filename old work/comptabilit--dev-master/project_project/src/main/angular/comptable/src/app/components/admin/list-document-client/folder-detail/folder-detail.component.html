@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-lg-12">
+      <div class="card">
+          <div class="card-title">
+              <h4>{{typeFolder}}</h4>
+              <h6 *ngIf="typeFolder=='Bilon Mensuel'">{{folder +' - '+ annee}}</h6>
+          </div>
+          <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                      
+                      </thead>
+                      <tbody>
+  
+                          <tr *ngFor="let document of documents">
+                              <td>{{document.name}}</td>
+                           
+                              <td>
+                                <button [routerLink]="['/client/document-view', document.id]" class="btn btn-success">Ouvrir</button>
+                                <button class="btn btn-danger  btn sweet-confirm">Supprimer</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+          
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  

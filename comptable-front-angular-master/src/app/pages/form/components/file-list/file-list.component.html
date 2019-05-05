@@ -1,0 +1,96 @@
+<!-- <card cardTitle="Trees Item">
+  <file-tree [model]="fileData"></file-tree>
+</card> -->
+<div id="list">
+  <ul id="myUL">
+    <li><span class="carett">Année 2019</span>
+      <ul class="nested">
+  
+        <li><span class="carett">Dossier Juridique </span>
+          <ul  class="nested">
+            <li  *ngFor="let file of fileUploads " class="file"><a href="{{path + file.name}}">{{file.name}}</a></li>
+          </ul>
+      
+           
+            <!-- <div *ngFor="let file of fileUploads ">
+            
+                <a class="file" href="{{file}}">{{file}}</a>
+          
+            </div>
+       -->
+        </li>
+
+        <li><span class="carett">Dossier annuel</span>
+          <ul class="nested">
+            <li><span class="carett">Documents envoyés</span>
+              <ul class="nested">
+                <li class="file">Sencha</li>
+                <li class="file">Gyokuro</li>
+                <li class="file">Matcha</li>
+                <li class="file">Pi Lo Chun</li>
+              </ul>
+            </li>
+            <li><span class="carett">Documents reçu</span>
+              <ul class="nested">
+                <li class="file">Sencha</li>
+                <li class="file">Gyokuro</li>
+                <li class="file">Matcha</li>
+                <li class="file">Pi Lo Chun</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><span class="carett">Dossier mensuel</span>
+          <ul class="nested">
+            <li><span class="carett">Janvier</span>
+              <ul class="nested">
+                <li><span class="carett">Documents envoyés</span>
+                  <ul class="nested">
+                    <li class="file">Sencha</li>
+                    <li class="file">Gyokuro</li>
+                    <li class="file">Matcha</li>
+                    <li class="file">Pi Lo Chun</li>
+                  </ul>
+                </li>
+                <li><span class="carett">Documents reçu</span>
+                  <ul class="nested">
+                    <li class="file">Sencha</li>
+                    <li class="file">Gyokuro</li>
+                    <li class="file">Matcha</li>
+                    <li class="file">Pi Lo Chun</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li><span class="carett">Février</span>
+              <ul class="nested">
+                <li><span class="carett">Documents envoyés</span>
+                  <ul class="nested">
+                    <li class="file">Sencha</li>
+                    <li class="file">Gyokuro</li>
+                    <li class="file">Matcha</li>
+                    <li class="file">Pi Lo Chun</li>
+                  </ul>
+                </li>
+                <li><span class="carett">Documents reçu</span>
+                  <ul class="nested">
+                    <li class="file">Sencha</li>
+                    <li class="file">Gyokuro</li>
+                    <li class="file">Matcha</li>
+                    <li class="file">Pi Lo Chun</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+  </ul>
+</div>
+

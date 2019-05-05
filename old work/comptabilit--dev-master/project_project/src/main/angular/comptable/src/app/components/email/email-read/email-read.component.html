@@ -1,0 +1,59 @@
+ <!-- Start Page Content -->
+ <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-content">
+                    <!-- Left sidebar -->
+                    <div class="inbox-leftbar">
+
+                        <a href="app-email-compose.html" class="btn btn-danger btn-block waves-effect waves-light">Nouveau Message</a>
+
+                        <div class="mail-list mt-4">
+                                <a href="#" class="list-group-item border-0 text-danger"><i class="mdi mdi-inbox font-18 align-middle mr-2"></i><b>Boîte de réception</b><span class="label label-danger float-right ml-2">8</span></a>
+                                <a href="#" class="list-group-item border-0"><i class="mdi mdi-send font-18 align-middle mr-2"></i>Messages envoyés</a>
+                                <a class="list-group-item border-0" href="#"><i class="mdi mdi-file-document-box font-18 align-middle mr-2"></i>Draft<span class="label label-info float-right ml-2">32</span></a>
+                        </div>
+
+              
+                    </div>
+                    <!-- End Left sidebar -->
+                    <div id="escapingBallG"  *ngIf="!message">
+                            <p>CHARGEMENT</p>
+                            <div id="escapingBall_1" class="escapingBallG"></div>
+                        </div>
+                    <div class="inbox-rightbar" *ngIf="message" >
+
+              
+                        <div class="mt-4">
+                            <h4  >{{message?.personneRecepteur.nomSociete}}</h4>
+
+                            <hr/>
+
+                            <div class="media mb-4 mt-1">
+                                <div class="media-body" >
+                                    <span  class="pull-right">{{message?.dateEnvoie}}</span>
+                                    <h6 class="m-0">{{message?.object}}</h6>
+                                </div>
+                            </div>
+
+                           <p [innerHTML]=" message.contenue | nl2br"></p>
+                           
+                            <hr/>
+
+                  
+                        </div>
+                        <!-- card-box -->
+                      
+           
+                        <div class="text-right">
+                            <button type="button" class="btn btn-primary waves-effect waves-light w-md m-b-30">Repondre</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End PAge Content -->

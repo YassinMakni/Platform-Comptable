@@ -1,0 +1,139 @@
+ <!-- Start Page Content -->
+ <div class="row">
+  <!-- Column -->
+  <div class="col-lg-12">
+      <div class="card">
+          <div class="card-body">
+              <div class="card-two">
+                  <header>
+                      <div class="avatar">
+                          <img src="../../../randomuser.me/api/portraits/women/21.jpg" alt="Allison Walker" />
+                      </div>
+                  </header>
+
+                  <h3>{{client?.nomSociete}}</h3>
+                  <div class="desc">
+                      {{client?.emailSociete}}
+                  </div>
+                  <div class="contacts">
+                      <div class="dropdown">
+                      <a   data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Nouveau Document</a></li>
+                          <li><a href="#">Nouveau Facture</a></li>
+                        </ul>
+                        </div>
+                      <a href="#"><i class="fa fa-folder"></i></a>
+                      <a href="#"><i class="fa fa-envelope"></i></a>
+                      <div class="clear"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Column -->
+  <!-- Column -->
+  <div class="col-lg-12">
+      <div class="card">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs profile-tab" role="tablist">
+              <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">Profile</a> </li>
+              <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a> </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+           
+              <!--second tab-->
+              <div class="tab-pane active" id="profile" role="tabpanel" >
+                <div *ngIf="client" id="client">
+                  <div class="card-body">
+                      <h3 class="box-title m-t-15">Entreprise Info</h3>
+                      <hr class="m-t-0 m-b-40">
+                      <div class="row">
+                          <div class="col-md-3 col-xs-6 b-r"> <strong>Nom</strong>
+                              <br>
+                              <p class="text-muted">{{client.nomSociete}}</p>
+                          </div>
+                          <div class="col-md-3 col-xs-6 b-r"> <strong>Téléphone</strong>
+                              <br>
+                              <p class="text-muted">{{client.telSociete}}</p>
+                          </div>
+                          <div class="col-md-3 col-xs-6 b-r"> <strong>Email</strong>
+                              <br>
+                              <p class="text-muted">{{client.emailSociete}} </p>
+                          </div>
+                          <div class="col-md-3 col-xs-6"> <strong>Adresse</strong>
+                              <br>
+                              <p class="text-muted">{{client.adresseSociete}}</p>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-3 col-xs-6 b-r"> <strong>Matricule Fiscale
+                        </strong>
+                            <br>
+                            <p class="text-muted">{{client.matricule}}</p>
+                        </div>
+                        <div class="col-md-3 col-xs-6 b-r"> <strong>Numéro registre du commerce
+                        </strong>
+                            <br>
+                            <p class="text-muted">{{client.numRegistreCommerce}}</p>
+                        </div>
+                        <div class="col-md-3 col-xs-6 b-r"> <strong>Secteur d'activité
+                        </strong>
+                            <br>
+                            <p class="text-muted">{{client.secteurActivite}} </p>
+                        </div>
+            
+                    </div>
+                      
+                  </div>
+              
+
+
+              <h3 class="box-title m-t-15">Responsable Info</h3>
+              <hr class="m-t-0 m-b-40">
+                <!--second tab-->
+                <div class="tab-pane active" id="profile" role="tabpanel">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6 b-r"> <strong>Nom</strong>
+                                <br>
+                                <p class="text-muted">client.nom</p>
+                            </div>
+                            <div class="col-md-3 col-xs-6 b-r"> <strong>Prénom</strong>
+                                <br>
+                                <p class="text-muted">{{client.prenom}}</p>
+                            </div>
+              
+                        </div>
+  
+                        <div class="row">
+                          <div class="col-md-3 col-xs-6 b-r"> <strong>Téléphone 
+                          </strong>
+                              <br>
+                              <p class="text-muted">{{client.telephone}} </p>
+                          </div>
+                          <div class="col-md-3 col-xs-6 b-r"> <strong>Email 
+                          </strong>
+                              <br>
+                              <p class="text-muted">{{client.email}}</p>
+                          </div>
+              
+                      </div>
+                        
+                    </div>
+                </div>
+              </div>
+              </div>
+              <div class="tab-pane" id="settings" role="tabpanel" *ngIf="client" >
+                  <app-edit-client [client]="client"></app-edit-client>
+              </div>
+            
+          </div>
+      </div>
+  </div>
+  <!-- Column -->
+</div>
+
+<!-- End PAge Content -->

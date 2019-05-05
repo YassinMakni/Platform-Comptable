@@ -1,0 +1,175 @@
+
+    
+       
+        <div class="row cadre">
+            <div class="col-lg-1"></div>
+          <div class="col-lg-10 cadre-body">
+            <div class="card card-outline-info">
+         
+                <div class="card-body">
+                    <form [formGroup]="clientForm" (ngSubmit)="onSubmit(clientForm)" class="form-horizontal">
+                        <div class="form-body">
+                            <h3 class="box-title m-t-15">Entreprise Info</h3>
+                            <hr class="m-t-0 m-b-40">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="control-label text-right col-md-3">Nom</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" formControlName="nomSociete" [ngModel]="client.nomSociete" disabled >
+                                           </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-4">Matricule Fiscale</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control form-control-danger" formControlName="matricule" [ngModel]="client.matricule" disabled >
+                                            <small class="form-control-feedback"> </small> </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+                            <!--/row-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-3">Téléphone</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control form-control-danger"  formControlName="telSociete" [ngModel]="client.telSociete">
+                                            <small class="form-control-feedback"> </small> </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-4">Numéro registre du commerce</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control form-control-danger" formControlName="numRegistreCommerce" [ngModel]="client.numRegistreCommerce" disabled >
+                                            <small class="form-control-feedback"> </small> </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+                            <!--/row-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-3">Email</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control form-control-danger" formControlName="emailSociete" [ngModel]="client.email" >
+                                            <small class="form-control-feedback"> </small>Entrez l'email de l'entreprise</div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-4">Secteur d'activité</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control form-control-danger" formControlName="secteurActivite" [ngModel]="client.secteurActivite" disabled >
+                                            <small class="form-control-feedback"> </small></div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                  <div class="form-group has-danger row">
+                                      <label class="control-label text-right col-md-3">Adresse</label>
+                                      <div class="col-md-9">
+                                          <input type="text" class="form-control form-control-danger" formControlName="adresseSociete" [ngModel]="client.adresseSociete">
+                                          <small class="form-control-feedback"> </small>Entrez l'adresse de l'entreprise</div>
+                                  </div>
+                              </div>
+                          
+                          </div>
+                            <h3 class="box-title">Résponsable Info</h3>
+                            <hr class="m-t-0 m-b-40">
+                            <!--/row-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-3">Nom</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control form-control-danger" formControlName="nom" [ngModel]="client.nom">
+                                            <small class="form-control-feedback"> </small>Entrez le nom du Résponsable</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-4">Prénom</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control form-control-danger" formControlName="prenom" [ngModel]="client.prenom" >
+                                            <small class="form-control-feedback"> </small>Entrez le prénom du responsable</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                  <div class="col-md-6">
+                                          <div class="form-group has-danger row">
+                                              <label class="control-label text-right col-md-3">Télephone</label>
+                                              <div class="col-md-9">
+                                                  <input type="text" class="form-control form-control-danger" formControlName="telephone" [ngModel]="client.telephone">
+                                                  <small class="form-control-feedback"> </small>Entrez le numero du téléphone du responsable</div>
+                                          </div>
+                                      </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-4">Email</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control form-control-danger" formControlName="email" [ngModel]="client.email"  >
+                                            <small class="form-control-feedback"> </small>Entrez l'email du Résponsable</div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!--/row-->
+                            <h3 class="box-title">Sécurité</h3>
+                            <hr class="m-t-0 m-b-40">
+                            <!--/row-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-3">Mot de passe </label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control form-control-danger" formControlName="motDePasse" >
+                                            <small class="form-control-feedback"> </small>Votre mot de passe doit comporter un minimum de 8 caractères,
+                                             se composer de chiffres et de lettres et comprendre des majuscules/minuscules</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger row">
+                                        <label class="control-label text-right col-md-4">Ecrire de nouveau</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control form-control-danger">
+                                            <small class="form-control-feedback"> </small>message alert !</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--/row-->
+                         
+                        </div>
+                        <hr>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-9"> </div>
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="submit" class="btn btn-success pull-right">Submit</button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+

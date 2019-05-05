@@ -1,0 +1,29 @@
+#profile , #settings{
+    margin-top: 30px ; 
+}
+.card-body .row{
+    margin-top:30px ; 
+    margin-bottom: 40px; 
+}
+.card-body p {
+    color: #99abb4 !important; 
+}
+hr{
+    border-color: #11caff !important; 
+ 
+}
+#profile h3{
+    margin-left: 30px; 
+    color: #11caff ; 
+
+}
+.dropdown-menu a{
+ display: inline-table !important;
+ width: 100% !important ; 
+ text-align: left !important ; 
+ float: none !important;
+ color: #99abb4 !important ; 
+}
+.dropdown-menu a:hover{
+    color:#11caff !important; 
+}

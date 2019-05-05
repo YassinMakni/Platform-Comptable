@@ -1,0 +1,44 @@
+<div class="theme-inner-banner" style="background-image:url(assetshome/sites/default/files/background/inner-banner.jpg)">
+  <div class="opacity">
+      <div class="container">
+          <p>Conventions collectives sectorielles</p>
+          <h2></h2>
+          <div id="block-inobi-breadcrumbs">
+              <ul>
+                  <li>
+                      <a href="index.html">Accueil</a>
+                  </li>
+                  <li>.</li>
+                  <li>Conventions collectives sectorielles</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="shop-page section-margin-bottom">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-9 col-md-8 col-xs-12 shop-product float-left">
+         
+           <router-outlet></router-outlet>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 shop-sidebar">
+              <div class="views-element-container sidebar-shop-categories" id="block-inobi-block-taxonomy-terms-block-product-categories">
+                  <h4>Conventions collectives sectorielles  :</h4>
+                  <div>
+                      <div class="js-view-dom-id-11e619077fa35e73a907559f5ddc38bebfbf2e483bcd9446b3f8bcb139742713">
+                          <div>
+                              <ul *ngFor="let document of documents">
+                                  <li>
+                                      <a [routerLink]="['/amc/conventions/view', document.id]" hreflang="en">{{document.nomNews}}</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+         
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="row">
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-title">
+            <h4>Collaborateurs</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            
+                            <th >Nom</th>
+                            <th>Prénom</th>
+                            <th>Téléphone</th>
+                            <th  >Email</th>
+                            <th  class="width:30%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let collaborateur of collaborateurs" id="{{collaborateur.id}}">
+                            <td>{{collaborateur.nom}}</td>
+                            <td>{{collaborateur.prenom}}</td>
+                            <td>{{collaborateur.telephone}}</td>
+                            <td>{{collaborateur.email}}</td>
+                            <td>
+                              <button class="btn btn-success">Profile</button>
+                              <button class="btn btn-danger  btn sweet-confirm" (click)="showMessage(collaborateur.id)">Supprimer</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+            </div>
+        </div>
+    </div>
+</div>
+</div>

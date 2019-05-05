@@ -1,0 +1,102 @@
+#list ul{
+    padding-left: 20px ; 
+    padding-top: 5px ; 
+}
+#list li{
+    padding-left: 20px ; 
+    font-size: 20px ; 
+  
+}
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+   
+  }
+  
+  /* Style the caret/arrow */
+  .carett {
+    position: relative;
+    cursor: pointer; 
+    user-select: none; /* Prevent text selection */
+  }
+
+  .file{
+    position: relative;
+    font-size: 14px !important ; 
+  }
+  .file::before{
+    content: "\f1c1";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #11caff;
+    font-size: 15px;
+    margin-right: 5px ; 
+  }
+  .file a {
+    text-decoration: none ; 
+    color: black ; 
+  }
+  
+
+  /* Create the caret/arrow with a unicode, and style it */
+  .carett::before {
+    content: "\f07b";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #11caff;
+    font-size: 25px;
+    margin-right: 5px ; 
+
+ 
+  }
+
+  .carett-open{
+    position: relative;
+  
+    cursor: pointer; 
+    user-select: none; /* Prevent text selection */
+  }
+
+  .carett-open::before {
+    content: "\f07c" !important;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #11caff;
+    font-size: 25px;
+    margin-right: 5px ; 
+
+ 
+  }
+  .file a:hover{
+    color: #11caff ; 
+    text-decoration: underline ; 
+    
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .carett-down::before {
+    text-transform: rotate(90deg) !important; 
+  }
+  
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  }
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }

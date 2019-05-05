@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-lg-12">
+      <div class="card">
+          <div class="card-title">
+              <h4>Conventions</h4>
+          </div>
+          <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>   
+                            
+                      </thead>
+                      <tbody>
+  
+                          <tr *ngFor="let document of documents" id="{{document.id+'a'}}">
+                              <td>{{document.nomNews}}</td>
+                           
+                              <td>
+                                <button [routerLink]="['./../../document-view', document.id]" class="btn btn-success">Ouvrir</button>
+                                <button class="btn btn-danger  btn sweet-confirm" (click)="showMessage(document.id)">Supprimer</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+          
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  

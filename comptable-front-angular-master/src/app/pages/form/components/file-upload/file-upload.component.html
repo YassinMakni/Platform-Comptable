@@ -1,0 +1,105 @@
+<div class="row">
+
+  
+    
+    <!-- <div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)" [uploader]="uploader"
+      class="well my-drop-zone">
+      Base drop zone
+    </div>
+    <div ng2FileDrop [ngClass]="{'another-file-over-class': hasAnotherDropZoneOver}" (fileOver)="fileOverAnother($event)" [uploader]="uploader"
+      class="well my-drop-zone">
+      Another drop zone
+    </div>-->
+  
+    
+
+
+
+  <div class="col-md-12" id="body">
+      <card cardTitle="Détails" isCollapse="true">
+          <div class="form-group">
+            <label class="control-label">Nom du fichier</label>
+            <input type="text" class="form-control"  [(ngModel)]="nom">
+          
+          </div>
+          <div class="form-group">
+              <label class="control-label">Type du fichier</label>
+              <select name="select" id="select1"  [(ngModel)]="type" class="form-control">
+                <option value="actualite">Actualités</option>
+                <option value="convention">Convenstions</option>
+              </select>
+            
+            </div>
+        </card>
+      <card   cardTitle="Description" isCollapse="true">
+          <div class="row" >
+            <div class="col-md-12">
+              <pell-editor style="height:200px" [defaultContent]="defaultContent"   (content)="onContentChange($event)"></pell-editor>
+            </div>
+            <div class="col-md-12">
+              <div id="text-output"></div>
+            </div>
+          </div>
+        </card>
+        
+    <h3>Select un fichier</h3>
+    <input  type="file" ng2FileSelect [uploader]="uploader" />
+    <table class="table">
+      <thead>
+        <tr>
+          <th width="50%">Nom</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of uploader.queue">
+          <td>
+            <strong>{{ item?.file?.name }}</strong>
+          </td>
+          <td class="text-center">
+            <span *ngIf="item.isSuccess">
+              <i class="glyphicon glyphicon-ok"></i>
+            </span>
+            <span *ngIf="item.isCancel">
+              <i class="glyphicon glyphicon-ban-circle"></i>
+            </span>
+            <span *ngIf="item.isError">
+              <i class="glyphicon glyphicon-remove"></i>
+            </span>
+          </td>
+          <td>
+            <button type="button" class="btn btn-success btn-xs" (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">
+              <span class="glyphicon glyphicon-upload"></span> Upload
+            </button>
+            <button type="button" class="btn btn-warning btn-xs" (click)="item.cancel()" [disabled]="!item.isUploading">
+              <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+            </button>
+            <button type="button" class="btn btn-danger btn-xs" (click)="item.remove()">
+              <span class="glyphicon glyphicon-trash"></span> Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <div>
+        <progress-bar [percent]="uploader.progress" theme="success"></progress-bar>
+      </div>
+      <!-- <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+        <span class="glyphicon glyphicon-upload"></span> Upload 
+      </button>
+      <button type="button" class="btn btn-warning btn-s" (click)="uploader.cancelAll()" [disabled]="!uploader.isUploading">
+        <span class="glyphicon glyphicon-ban-circle"></span> Cancel 
+      </button>
+      <button type="button" class="btn btn-danger btn-s" (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
+        <span class="glyphicon glyphicon-trash"></span> Remove 
+      </button> -->
+      <button type="button" (click)="uploadSubmit()" class="btn btn-success btn-s pull-right"  >
+        <span class="glyphicon glyphicon-upload" ></span> Enregister
+      </button>
+    </div>
+  </div>
+ 
+
+</div>

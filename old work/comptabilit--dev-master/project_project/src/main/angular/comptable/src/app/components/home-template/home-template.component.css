@@ -1,0 +1,31 @@
+footer .Subscribe  input[type=button] {
+    width: auto;
+    padding: 5px 20px;
+    color: #fff;
+    background: #11caff !important;
+    height: 50px;
+    margin-left: 12px;
+    padding: 0 30px;
+    border-radius: 0;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+   
+  
+}
+footer .Subscribe  input[type=submit]:hover {
+    background: #fc7837;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(252, 120, 55);
+}
+    /* #block-footer{
+        margin-left: 15px ; 
+    } */

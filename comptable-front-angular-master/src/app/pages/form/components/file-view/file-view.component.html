@@ -1,0 +1,4 @@
+<!-- <div id="frame" *ngIf="document">
+  <iframe width="90%" height="1500" [src]="path + document.name | safe" type="application/pdf"></iframe>
+</div> -->
+<pdf-viewer [src]="path + document?.name"></pdf-viewer>

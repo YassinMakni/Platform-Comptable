@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-lg-12">
+      <div class="card">
+          <div class="card-title">
+              <h4>Liste d'attente</h4>
+          </div>
+          <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              
+                            <th >Nom</th>
+                            <th>Téléphone</th>
+                            <th  >Email</th>
+                            <th  class="width:30%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+  
+                          <tr *ngFor="let client of clients" id="{{client.id+'a'}}">
+                              <td>{{client.nomSociete}}</td>
+                              <td>{{client.telSociete}}</td>
+                              <td>{{client.emailSociete}}</td>
+                              <td>
+                                <button class="btn btn-success">Profile</button>
+                                <button class="btn btn-danger btn sweet-confirm" (click)="showMessageSupprime(client.id)">Supprimer</button>
+                                <button class="btn btn-grean btn-success btn sweet-success"  (click)="showMessageSucess(client.id+'a',client.id)">Approuver</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
